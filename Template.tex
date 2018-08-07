@@ -1,0 +1,285 @@
+% ----------------------------------------------------------------------- %
+% | Template per la trascrizione degli esami di Algebra e Mat. Discreta | %
+% |              Autore originale: Sara Righetto, 2018                  | %
+% | 		   Link al repository del Template: 			| %
+% |  https://github.com/AkaiSara/TemplateAlgebraEMatematicaDiscreta.git | %
+% ----------------------------------------------------------------------- %
+
+% Sezione di configurazione, non modificare se non sai quello che fai
+
+\documentclass[12pt,a4paper]{article}
+
+\usepackage[english,italian]{babel}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+
+\usepackage{verbatim} %commenti
+\usepackage{enumitem} %lists
+\usepackage{mathtools} %math package
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsthm}
+
+% ------------ %
+% | Tutorial | %
+% ------------ %
+\begin{comment}
+    BREVE TUTORIAL
+
+- Il contenuto di una riga che segue il carattere '%' verrà ignorato dal compilatore; Se si aggiungono più di uno spazio a capo, o più spazi essi verranno ignorati dal compilatore.
+
+- Ogni espressione matematica DEVE essere racchiusa all'interno di '\(' per iniziare un'espressione e '\)' per indicare al compilatore che è terminata. Se non si rispetta questa regola è possibile incappare in errori di formattazione (per esempio, testo in corsivo senza spazi). In alternativa si può utilizzare il tag '\[' e il rispettivo '\]' per racchiudere un'espressione matematica al centro del foglio, in una riga dedicata. Anche tutto ciò che è racchiuso tra il simbolo '$' è considerato espressione matematica dal compilatore, con relativa formattazione.
+
+- ELIMINARE semplicemente gli esercizi che non sono apparsi nel compito che si sta trascrivendo: il file originale resterà sempre invariato;
+
+- È sufficiente modificare i campi (generalmente hanno 0 come placeholder) delle matrici (o più in generale, qualsiasi struttura) degli esercizi di interesse.
+    Esempio:
+    
+    \[ 
+        \left\{ 
+            \begin{array}{rcl} 
+            x \equiv 0 $ mod $ 0 \\
+            x \equiv 0 $ mod $ 0 
+            \end{array}
+        \right . 
+    \]
+    
+    diventerà (con dati inseriti casualmente, in questo caso)
+    
+    \[ 
+        \left\{ 
+            \begin{array}{rcl} 
+            x \equiv 4 $ mod $ 5 \\
+            x \equiv 2 $ mod $ 7 
+            \end{array} 
+        \right . 
+    \]
+
+- Per aggiungere righe alle matrici utilizzare '\\' che genera una nuova riga(fuori dalle matrici viene interpretato come uno spazio a capo), per aggiungere colonne usare il simbolo '&';
+
+- Le matrici con parentesi tonde sono identificate dai tag/comando '\begin{bmatrix}' seguito dalla chiusura '\end{bmatrix}'; le matrici con parentesi quatrate invece utilizzano il tag '\begin{pmatrix}; (è molto importante chiudere ogni '\begin' col suo rispettivo '\end' altrimenti il compilatore darà errore);
+
+- Se si vuole creare un'espressione matematica con più righe che sia racchiusa in parentesi (per esempio il sistema di conguenze) si utilizzano i tag '\left\{' per indicare la parentesi sinistra e '\right .' per la parentesi destra. NON utilizzare il tag '\right' senza il punto, altrimenti si ha un errore di sintassi. Inoltre si possono rappresentare anche altre parentesi come quella tonda '\left\(' e quella quadra '\left\[';
+
+
+    SERIE DI COMANDI GENERALI
+    
+- \equiv      -> segno di congruenza
+- \alpha      -> alfa dell'alfabeto greco (\Alpha genera la lettera maiuscola)
+- \in         -> segno di appartenenza
+- \mathbb{R}  -> la lettera scritta nelle parentesi graffe genera una notazione dei numeri reali (C per i complessi, N per i naturali, Z per gli interi)
+- \geq        -> segno maggiore uguale
+- \leq        -> segno minore uguale
+- \rightarrow -> segno freccia che punta verso destra semplice
+- \Rightarrow -> segno freccia che punta verso destra (segno di implica)
+- d^{min}     -> d *elevato alla* min (nel caso '\d^min' si avrebbe una formattazione sbagliata del tipo 'd *elevato alla* m' seguito da 'in' non in apice)
+- a_b         -> a pedice b
+- '\(' e '\)' sono equivalenti a '$' e '$'
+- \mid        -> tali che, t.c., '|'
+- \textit{}   -> rende in corsivo il testo scritto tra le graffe
+- \textbf{}   -> rende in grassetto il testo scritto tra le graffe
+
+\end{comment}
+
+% ---------------------------------------------------------------------- %
+% Qui inizia il documento vero e proprio, in cui editare i campi [...] | %
+% ---------------------------------------------------------------------- %
+\begin{document}
+\begin{itemize}[label=$\circ$]
+
+    %Primo tipo di esercizio
+    \item (6 pt.) Si risolva il sistema di congruenze:
+    \[ 
+        \left\{ 
+            \begin{array}{rcl} 
+                x \equiv 0 $ mod $ 0 \\
+                x \equiv 0 $ mod $ 0 
+            \end{array} 
+        \right . 
+    \]
+
+    %Secondo tipo di esercizio
+    \item Dati 
+    \(
+        A =
+        \begin{pmatrix}
+            0 & 0 \\
+            0 & 0
+        \end{pmatrix}
+    \)
+        e 
+    \(
+        b(\alpha) =
+        \begin{pmatrix}
+            0 & 0 \\
+            0 & 0
+        \end{pmatrix}
+    \)
+
+    \begin{enumerate} 
+        \item (2 pt.) Si risolva il sistema lineare \( A(\alpha)x = b(\alpha) \) dipendente dal parametro $\alpha \in \mathbb{C}$  
+
+        \item (1 pt.) trovare una base B dello spazio delle colonne C(A) di A 
+
+        \item (2 pt.) trovare una base ortonormale C dello spazio delle colonne C(A) di A 
+    \end{enumerate}   
+
+    %Terzo tipo di esercizio
+    \item Sia 
+        \( 
+            T: \mathbb{R}^2 \rightarrow \mathbb{R}^3 
+        \) 
+        e 
+        \( 
+            T 
+            \begin{pmatrix} 
+                0 
+            \end{pmatrix} 
+            \rightarrow 
+            \begin{pmatrix} 
+                0 
+            \end{pmatrix}  
+        \)
+
+    Trovare la matrice A associata a T rispetto alle basi ordinate: \\
+    \(
+        B = 
+        \left\{ 
+            \begin{pmatrix}
+                0 & 0 \\
+                0 & 0
+            \end{pmatrix} 
+            ,
+            \begin{pmatrix}
+                0 & 0 \\
+                0 & 0
+            \end{pmatrix}
+        \right\}
+    \)
+        ed  
+    \(
+        D = 
+        \left\{ 
+            \begin{pmatrix}
+                0 & 0 \\
+                0 & 0
+            \end{pmatrix} 
+            ,
+            \begin{pmatrix}
+                0 & 0 \\
+                0 & 0
+            \end{pmatrix}
+        \right\}
+    \)
+
+    Non si richiede di dimostrare che è un'applicazione lineare.
+
+    %Quarto tipo di esercizio
+    \item Sia 
+    \(
+        A = 
+        \begin{pmatrix}
+            0 & 0 \\
+            0 & 0
+        \end{pmatrix}
+    \)  
+    \begin{enumerate}
+        \item (1 pt.) Si provi che A è unitariamente diagonalizzabile
+        \item (5 pt.) Si trovi una matrice unitaria U ed una relativa matrice diagonale D tali che A $=UHU^H$
+    \end{enumerate}
+
+    %Quinto tipo di esercizio
+    \item (6 pt.) Quale delle seguenti affermazioni è vera? Motivare brevemente ogni risposta: se falsa dare un contro esempio.
+    \begin{enumerate}
+        \item Dato \( G(V,E) \) se G è hamiltoniano allora G è 2-connesso ( \( K(G) \geq 2 \) ).
+        \item Dato \( G(V,E) \) se G è 2-connesso allora G è hamiltoniano.
+        \item Dato un grafo semplice \( G(V,E) \) se \(d^{min} (G) \geq 2 \) allora G contiene un ciclo. 
+        \item Dato un grafo semplice \( G(V,E) \) se \(d^{min} (G) \geq 2 \) allora G è 2-connesso.
+        \item Un grafo \( G(V,E) \) è euleriano se e solo se è connesso e non contiene nodi di grado dispari.
+        \item  Dato un grafo semplice  \( G(V,E) \) se G è 2-connesso allora G è 2-arcoconnesso ( \( K^E(G) \geq 2 \) ).
+    \end{enumerate}
+
+    %Sesto tipo di esercizio
+    \item (5 pt.) Quanti modi di disporre su una scacchiera 8 x 8:
+    \begin{enumerate}
+        \item Un re, una regina e un pedone (3 pezzi distinti).
+        \item Due re e un pedone (2 pezzi uguali e il terzo distinto).
+    \end{enumerate}
+
+    %Settimo tipo di esercizio
+    \item (7 pt.) Si risolva il sistema lineare \( A(\alpha)x = b(\alpha) \) dipendente dal parametro $\alpha \in \mathbb{R}$ \\ 
+
+    \(
+        A(\alpha) =
+        \begin{bmatrix}
+            0 & 0 \\
+            0 & 0
+        \end{bmatrix}
+    \)
+        e 
+    \(
+        b(\alpha)=
+        \begin{bmatrix}
+            0 & 0 \\
+            0 & 0
+        \end{bmatrix}
+    \)
+
+    %Ottavo tipo di esercizio
+    \item Si consideri lo spazio vettoriale \( V = M_2( \mathbb{C}) \). \\ 
+
+    Siano 
+    \(
+        W = 
+        \left\{ 
+            \begin{pmatrix}
+                a & 0 \\
+                0 & b
+            \end{pmatrix} 
+            \mid a,b \in \mathbb{C}
+        \right\}
+    \)
+        ed  
+    \(  
+        S = 
+        \left\{ 
+            \begin{pmatrix}
+                0 & 0 \\
+                0 & 0
+            \end{pmatrix} 
+            ,
+            \begin{pmatrix}
+                0 & 0 \\
+                0 & 0
+            \end{pmatrix} 
+            ,
+            \begin{pmatrix}
+                0 & 0 \\
+                0 & 0
+            \end{pmatrix}
+        \right\}
+    \)
+
+    \begin{enumerate}
+        \item (4 pt.) Si provi che $W$ è un sottospazio vettoriale di $V$.
+        \item (4 pt.) Si dica se $S$ è un insieme di generatori per $W$.
+    \end{enumerate}
+
+    %Nono tipo di esercizio
+    \item (5 pt.) Nel grafo seguente \( G(V,E) \) si determini la connettività \( K(G) \), la connettività sugli archi \( K e(G) \) ed il grado minimo. Si evidenzino un taglio minimo ed un separatore minimo. 
+
+    \item Quale delle seguenti affermazioni è vera? Motivare brevemente ogni risposta: se falsa dare un contro esempio. Se vera dire perchè. (La sequenza dei gradi di un grafo è la lista di tutti i gradi dei vertici, ordinata in modo crescente).
+
+    %Decimo tipo di esercizio
+    \begin{enumerate}
+        \item (1 pt.) 3,3,3,3,3 è la sequenza di gradi di un grafo semplice?
+        \item (1 pt.) 3,3,3,2,1 è la sequenza di gradi di un grafo semplice?
+        \item (1 pt.) 3,3,3,3,3,3 è la sequenza di gradi di un grafo semplice?
+        \item (1 pt.) 4,4,4,4,4 è la sequenza di gradi di un grafo planare semplice?
+        \item (1 pt.) Se \( G_1 \) e \( G_2 \) sono isomorfi, allora le loro sequenze di gradi coincidono.
+        \item (1 pt.) Dati i grafi \( G_1 \) e \( G_2 \) se le loro sequenze di grafi coincidono allora \( G_1 \) e \( G_2 \) sono isomorfi.
+    \end{enumerate}
+
+%non modificare queste ultime righe
+\end{itemize}
+\end{document}
